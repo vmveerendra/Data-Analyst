@@ -2636,13 +2636,13 @@ ALTER TABLE job_history ADD FOREIGN KEY (department_id) REFERENCES departments(d
 
 show tables;
 
-select * from employees;
+select * from employees;   //query to show the records from employees table
 
-select first_name, last_name from employees;
+select first_name, last_name from employees; // query to show the full name of employees from employees thable
 
-select * from employees where salary>50000;
+select * from employees where salary>50000; // query to retrive the records of more than $50000 salary of emoloyees from employees table
 
-select avg(salary) from employees;
+select avg(salary) from employees;  // query to get the average salary of all employees from the employees table
 
 select city, count(city) as count_city from locations group by city;
 
