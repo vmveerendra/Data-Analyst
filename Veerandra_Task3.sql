@@ -2644,11 +2644,11 @@ select * from employees where salary>50000; // query to retrive the records of m
 
 select avg(salary) from employees;  // query to get the average salary of all employees from the employees table
 
-select city, count(city) as count_city from locations group by city;
+select city, count(city) as count_city from locations group by city;   // query to count the number of cities from the location table 
 
-select * from departments where department_name="IT";
+select * from departments where department_name="IT";		//query to retrive the department name is IT from the department table
 
-SELECT salary
+SELECT salary	
 FROM emp_details_view
 WHERE salary IN (
     SELECT salary FROM (
@@ -2659,20 +2659,20 @@ OR salary IN (
     SELECT salary FROM (
         SELECT salary FROM emp_details_view ORDER BY salary DESC LIMIT 5
     ) AS max_salaries
-)ORDER BY salary DESC;
+)ORDER BY salary DESC;								//query to get the record of top 5 highest salaries and 5 lowest salaries from emp_details_view table
 
-select * from emp_details_view where department_name="sales" and region_name="Europe";
+select * from emp_details_view where department_name="sales" and region_name="Europe";		//query to get the records of department name is sales and region name is Europ from emp_details_view table
 
-select * from emp_details_view where commission_pct is not NULL;
+select * from emp_details_view where commission_pct is not NULL;			//query to retrive the the data whos commission_pct is not null from the list from the emp_details_view table
 
-select department_name, sum(salary) as total_salary from emp_details_view group by department_name;
+select department_name, sum(salary) as total_salary from emp_details_view group by department_name;	//query to get the total salary of each departments from the emp_details_view table
 
-select city, sum(commission_pct) as total_commission from emp_details_view group by city;
+select city, sum(commission_pct) as total_commission from emp_details_view group by city;	// query to give the totall commission of each cities from emp_details_view table
 
-select department_name, max(salary) as maximum_salary, min(salary) as minimum_salary from emp_details_view group by department_name;
+select department_name, max(salary) as maximum_salary, min(salary) as minimum_salary from emp_details_view group by department_name;	//query to give the result for maximum and minimum salary for each departments from emp_details_view table
 
-select salary from emp_details_view order by salary desc limit 10;
+select salary from emp_details_view order by salary desc limit 10;	//query to give the top 10 highest salary from emp_details_view table
 
-select city, sum(salary) as total_salary, avg(salary) as average_salary from emp_details_view group by city;
+select city, sum(salary) as total_salary, avg(salary) as average_salary from emp_details_view group by city;	//query to give the city_wise salary
 
-select department_name, sum(salary) as total_salary from emp_details_view group by department_name order by total_salary desc;
+select department_name, sum(salary) as total_salary from emp_details_view group by department_name order by total_salary desc;		//query to display department_wise salary 
